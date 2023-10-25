@@ -4,11 +4,13 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import pages.LoginPage;
 import pages.RegistrationPage;
 
 public class TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
+    LoginPage loginPage = new LoginPage();
 
     @BeforeAll
     static void setUp() {

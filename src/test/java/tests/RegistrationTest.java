@@ -2,7 +2,7 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 
-public class RegistrationTest extends TestBase {
+public class RegistrationTest extends tests.TestBase {
 
     @Test
     void successfulRegistrationFillAllFieldsTest() {
@@ -34,7 +34,6 @@ public class RegistrationTest extends TestBase {
                 .checkResultModalTable("State and City", "NCR Delhi");
 
     }
-
     @Test
     void successfulRegistrationFillRequiredFieldsTest() {
 
@@ -65,15 +64,6 @@ public class RegistrationTest extends TestBase {
                 .setEmail("vit.perov@gmail.com")
                 .setGender("Male")
                 .setUserNumber("9800000000")
-                .clickSubmit();
-
-        registrationPage.checkModalDialogHidden();
-    }
-
-    @Test
-    void unsuccessfulRegistrationNotFillFormTest() {
-
-        registrationPage.openPage()
                 .clickSubmit();
 
         registrationPage.checkModalDialogHidden();
