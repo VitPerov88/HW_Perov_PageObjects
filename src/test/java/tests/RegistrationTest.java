@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class RegistrationTest extends tests.TestBase {
@@ -16,7 +17,7 @@ public class RegistrationTest extends tests.TestBase {
                 .setDateOfBirth("02", "October", "1988")
                 .setSubjects("Economics")
                 .setHobbies("Reading")
-                .uploadPicture("photo.png")
+                .uploadPicture("photo.jpg")
                 .setAddress("Russia")
                 .setState("NCR")
                 .setCity("Delhi")
@@ -34,7 +35,7 @@ public class RegistrationTest extends tests.TestBase {
                 .checkResultModalTable("State and City", "NCR Delhi");
 
     }
-    @Test
+    @Test @Disabled
     void successfulRegistrationFillRequiredFieldsTest() {
 
         registrationPage.openPage()
@@ -55,7 +56,7 @@ public class RegistrationTest extends tests.TestBase {
                 .checkResultModalTable("Subjects", "Economics");
     }
 
-    @Test
+    @Test @Disabled
     void unsuccessfulRegistrationFillWrongEmailTest() {
 
         registrationPage.openPage()

@@ -1,14 +1,16 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import pages.components.Helpers;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class LoginPage {
+    Helpers helper = new Helpers();
 
-    SelenideElement titleBookStore = $("margin-bottom"),
+    SelenideElement titleLabel = $(".main-header"),
             loginName = $("#userName"),
             password = $("#password"),
             loginButton = $("#login"),
@@ -19,7 +21,7 @@ public class LoginPage {
 
     public LoginPage openPage() {
         open("/login");
-        titleBookStore.shouldHave(text("Login"));
+        titleLabel.shouldHave(text("Login"));
 
         return this;
 
@@ -41,7 +43,7 @@ public class LoginPage {
         return this;
     }
     public LoginPage checkRedirectToPage(String value) {
-        titleBookStore.shouldHave(text(value));
+        titleLabel.shouldHave(text(value));
 
         return this;
     }
