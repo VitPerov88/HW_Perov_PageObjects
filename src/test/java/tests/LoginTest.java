@@ -14,4 +14,13 @@ public class LoginTest extends tests.TestBase {
                 .checkRedirectToPage("Profile")
                 .clickLogOut();
     }
+    @Test
+    void unsuccessfulLoginTestWrongPassword() {
+
+        loginPage.openPage()
+                .setLoginName("Chupakabra")
+                .setPassword("Pass1234")
+                .clickLogin()
+                .checkMessageInvalidLogin();
+    }
 }

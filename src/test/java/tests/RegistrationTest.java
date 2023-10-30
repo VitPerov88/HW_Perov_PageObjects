@@ -9,6 +9,7 @@ public class RegistrationTest extends tests.TestBase {
     void successfulRegistrationFillAllFieldsTest() {
 
         registrationPage.openPage()
+                .removeBanners()
                 .setFirstName("Vit")
                 .setLastName("Perov")
                 .setEmail("vit.perov@gmail.com")
@@ -30,15 +31,16 @@ public class RegistrationTest extends tests.TestBase {
                 .checkResultModalTable("Date of Birth", "02 October,1988")
                 .checkResultModalTable("Subjects", "Economics")
                 .checkResultModalTable("Hobbies", "Reading")
-                .checkResultModalTable("Picture", "photo.png")
+                .checkResultModalTable("Picture", "photo.jpg")
                 .checkResultModalTable("Address", "Russia")
                 .checkResultModalTable("State and City", "NCR Delhi");
 
     }
-    @Test @Disabled
+    @Test
     void successfulRegistrationFillRequiredFieldsTest() {
 
         registrationPage.openPage()
+                .removeBanners()
                 .setFirstName("Vit")
                 .setLastName("Perov")
                 .setEmail("vit.perov@gmail.com")
@@ -56,13 +58,14 @@ public class RegistrationTest extends tests.TestBase {
                 .checkResultModalTable("Subjects", "Economics");
     }
 
-    @Test @Disabled
+    @Test
     void unsuccessfulRegistrationFillWrongEmailTest() {
 
         registrationPage.openPage()
+                .removeBanners()
                 .setFirstName("Vit")
                 .setLastName("Perov")
-                .setEmail("vit.perov@gmail.com")
+                .setEmail("vit.perov")
                 .setGender("Male")
                 .setUserNumber("9800000000")
                 .clickSubmit();
