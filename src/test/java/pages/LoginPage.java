@@ -1,14 +1,12 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import pages.components.Helpers;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class LoginPage {
-    Helpers helper = new Helpers();
 
     SelenideElement titleLabel = $(".main-header"),
             loginName = $("#userName"),

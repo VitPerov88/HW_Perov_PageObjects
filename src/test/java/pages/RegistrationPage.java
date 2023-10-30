@@ -2,7 +2,6 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
-import pages.components.Helpers;
 import pages.components.ModalTableComponent;
 
 import static com.codeborne.selenide.Condition.hidden;
@@ -11,7 +10,6 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
-    Helpers helper = new Helpers();
     CalendarComponent calendar = new CalendarComponent();
     ModalTableComponent modalTable = new ModalTableComponent();
 
