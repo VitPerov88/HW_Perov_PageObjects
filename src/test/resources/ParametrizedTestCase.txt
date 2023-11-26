@@ -1,0 +1,17 @@
+TEST-DATA [
+["Chupakabra" , "Pass1234_"]
+["Username" , "Pass1234_*"]
+]
+
+0) Повторить для все наборов TEST-DATA
+1) ЗАГОЛОВОК: "Тестирование входа в личный кабинет с разными данными Login \ Password"
+2) ПРЕДУСЛОВИЯ:
+  -Открыть браузер
+  -Перейти на сайт: https://demoqa.com/login
+3) ПРИОРИТЕТ КРИТИЧНОСТЬ / BLOCKER
+4) ШАГИ
+  - В поле Login ввести "Chupakabra"
+  - В поле Password ввести "Pass1234_*"
+  - Нажать Enter
+ 5) ОЖИДАЕМЫЙ РЕЗУЛЬТАТ:
+  - вывод сообщения об ошибке "Invalid username or password!"
